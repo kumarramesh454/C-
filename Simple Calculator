@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+      char operation;
+   double n1,n2;
+   
+   printf("Enter the operation: ");
+   scanf("%c",&operation);
+   printf("Enter the values: ");
+   scanf("%lf%lf",&n1,&n2);
+   
+   switch(operation){
+       case '+':
+       printf("%lf+%lf=%lf",n1,n2,n1+n2);
+       break;
+       
+       case '-':
+       printf("%lf-%lf=%lf",n1,n2,n1-n2);
+       break;
+       
+       case '*':
+       printf("%lf*%lf=%lf",n1,n2,n1*n2);
+       break;
+       
+       case '/':
+       printf("%lf/%lf=%lf",n1,n2,n1/n2);
+       break;
+       
+       default:
+       printf("OOPS:you entered something wrong");
+   }
+    
+    return 0;
+}
