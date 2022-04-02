@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+     char alp;
+     int lcv,ucv;
+     printf("Enter an alphabat: ");
+     scanf("%c",&alp);
+     lcv=(alp=='a'||alp=='e'||alp=='i'||alp=='o'||alp=='u');
+     ucv=(alp=='A'||alp=='E'||alp=='I'||alp=='O'||alp=='U');
+     
+     if(lcv || ucv)
+     {
+         printf("You entered a vowel",alp);
+     }
+     else
+     {
+         printf("You entered a consonant");
+     }
+    
+    
+    return 0;
+}
