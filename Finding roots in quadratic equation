@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double a,b,c,dis,root1,root2,realpart,imagepart;
+   printf("Enter the coefficent a,b and c: ");
+   scanf("%lf %lf %lf",&a,&b,&c);
+   dis=b * b - 4 * a * c;
+   
+   // condition for real and different roots
+   if(dis > 0)
+   {
+       root1=(- b + sqrt(dis)) / (2 * a);
+       root1=(- b - sqrt(dis)) / (2 * a);
+       printf("Root1=%.2lf Root2=%.2lf",root1,root2);
+   }
+   
+   // condition for real and equal roots
+   else if(dis == 0)
+   {
+       root1=root2=-b / (2 * a);
+       printf("Root1=Root2=%.2lf",root1);
+   }
+   
+   // if roots are not real
+   else
+   {
+       realpart=-b / (2 * a);
+       imagepart=sqrt(-dis) / (2 * a);
+        printf("root1 = %.2lf+%.2lf and root2 = %.2f-%.2f", realpart, imagepart, realpart, imagepart);
+    }
+    
+    return 0;
+}
